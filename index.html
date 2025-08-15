@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVE APPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container header-container">
+        <h1>ATIVE APPS</h1>
+        <nav>
+            <a href="#hero">Início</a>
+            <a href="#sobre">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section id="hero">
+    <div class="container hero-container">
+        <div class="hero-text">
+            <h2>Sites modernos para empresas que querem crescer</h2>
+            <p>Criamos experiências digitais que encantam clientes e aumentam sua presença online.</p>
+            <p>NESTE SITE VOCÊ VAI ENCONTRAR TODOS OS APLICATIVOS PARA SEREM ATIVADOS!</p>
+            <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" class="btn-whatsapp">
+                💬 Chamar no WhatsApp
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="./img/painel bit.jpg" alt="Painel Bit">
+        </div>
+    </div>
+</section>
+
+<!-- Serviços -->
+<section id="sobre">
+    <div class="container">
+        <h3>O que oferecemos</h3>
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <img src="./img/painel by.jpg" alt="Design">
+                <h4>Design Responsivo</h4>
+                <p>Sites que funcionam perfeitamente em todos os dispositivos, com foco em estética e usabilidade.</p>
+            </div>
+            <div class="servico-card">
+                <img src="./img/painell (3).jpg" alt="SEO">
+                <h4>Otimização SEO</h4>
+                <p>Seu site nas primeiras posições do Google com boas práticas e velocidade de carregamento.</p>
+            </div>
+            <div class="servico-card">
+                <img src="./img/painel on.jpg" alt="Manutenção">
+                <h4>Suporte & Manutenção</h4>
+                <p>Acompanhamento contínuo para garantir que tudo continue funcionando perfeitamente.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Painéis e Vídeo -->
+<section id="painel">
+    <div class="container">
+        <h3>Painéis e Aplicativos</h3>
+
+        <video src="./img/videopainel.MP4" controls></video>
+
+        <div class="imagens-grid">
+            <div class="imagem">
+                <img src="./img/painel by.jpg" alt="Painel By">
+                <p>Painel Intuitivo</p>
+            </div>
+            <div class="imagem">
+                <img src="./img/painel life.jpg" alt="Painel Life">
+                <p>Painel Life</p>
+            </div>
+            <div class="imagem">
+                <img src="./img/painel ly.jpg" alt="Painel Ly">
+                <p>Painel Ly</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contato -->
+<section id="contato">
+    <div class="container">
+        <h3>Fale com a gente</h3>
+        <form id="contactForm">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+            <p id="feedback"></p>
+        </form>
+    </div>
+</section>
+
+<!-- Botão WhatsApp fixo -->
+<a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" class="btn-whatsapp-fixed">
+    💬 Chamar no WhatsApp
+</a>
+
+<!-- Footer -->
+<footer>
+    &copy; 2025 Cervo Digital. Todos os direitos reservados.
+</footer>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    emailjs.init('odTeSLj29XyKQLfXl');
+
+    const form = document.getElementById('contactForm');
+    const feedback = document.getElementById('feedback');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        emailjs.sendForm('wSWTb40hixpLXY985L1xi', 'template_9e3n39l', this)
+            .then(function() {
+                feedback.textContent = "Mensagem enviada!";
+                feedback.className = 'success';
+                form.reset();
+            }, function(error) {
+                feedback.textContent = 'Erro ao enviar. Tente novamente!';
+                feedback.className = 'error';
+            });
+    });
+</script>
+
+</body>
+</html>
