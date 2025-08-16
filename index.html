@@ -1,159 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATIVE APPS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATIVE APPS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Consent Manager -->
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/1081e477a2579.js" data-cmp-host="d.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+  <!-- Consent Manager -->
+  <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/1081e477a2579.js" data-cmp-host="d.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
 
-    <!-- Google Ads gtag.js -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17024433243"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17024433243');
-    </script>
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17024433243"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17024433243');
+  </script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
 <!-- Header -->
-<header>
-    <div class="container header-container">
-        <h1>ATIVE APPS</h1>
-        <nav>
-            <a href="#hero">Início</a>
-            <a href="#sobre">Serviços</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </div>
+<header class="fixed w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-indigo-600">ATIVE APPS</h1>
+    <nav class="space-x-4 text-sm font-medium">
+      <a href="#hero" class="hover:text-indigo-600 transition">Início</a>
+      <a href="#sobre" class="hover:text-indigo-600 transition">Serviços</a>
+      <a href="#contato" class="hover:text-indigo-600 transition">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<!-- Hero -->
-<section id="hero">
-    <div class="container hero-container">
-        <div class="hero-text">
-            <h2>Sites modernos para empresas que querem crescer</h2>
-            <p>Criamos experiências digitais que encantam clientes e aumentam sua presença online.</p>
-            <p>NESTE SITE VOCÊ VAI ENCONTRAR TODOS OS APLICATIVOS PARA SEREM ATIVADOS!</p>
-
-            <!-- Botão WhatsApp com evento de conversão -->
-            <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" 
-               target="_blank" 
-               class="btn-whatsapp"
-               onclick="gtag('event', 'Compra', { 'send_to': 'AW-17024433243/ads_conversion_Compra_1' });">
-               💬 Chamar no WhatsApp
-            </a>
-        </div>
-        <div class="hero-image">
-            <img src="./img/painel bit.jpg" alt="Painel Bit">
-        </div>
+<!-- Hero Section -->
+<section id="hero" class="pt-32 pb-16 bg-indigo-600 text-white">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    <div class="md:w-1/2 text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Sites modernos para empresas que querem crescer</h2>
+      <p class="mb-4">Criamos experiências digitais que encantam clientes e aumentam sua presença online.</p>
+      <p class="mb-6">NESTE SITE VOCÊ VAI ENCONTRAR TODOS OS APLICATIVOS PARA SEREM ATIVADOS!</p>
+      <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank"
+         onclick="gtag('event', 'Compra', { 'send_to': 'AW-17024433243/ads_conversion_Compra_1' });"
+         class="inline-block bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-bold">💬 Chamar no WhatsApp</a>
     </div>
+    <div class="md:w-1/2">
+      <img src="./img/painel bit.jpg" alt="Painel" class="rounded-lg shadow-lg mx-auto">
+    </div>
+  </div>
 </section>
 
 <!-- Serviços -->
-<section id="sobre">
-    <div class="container">
-        <h3>O que oferecemos</h3>
-        <div class="servicos-grid">
-            <div class="servico-card">
-                <img src="./img/painel by.jpg" alt="Design">
-                <h4>Design Responsivo</h4>
-                <p>Sites que funcionam perfeitamente em todos os dispositivos, com foco em estética e usabilidade.</p>
-            </div>
-            <div class="servico-card">
-                <img src="./img/painell (3).jpg" alt="SEO">
-                <h4>Otimização SEO</h4>
-                <p>Seu site nas primeiras posições do Google com boas práticas e velocidade de carregamento.</p>
-            </div>
-            <div class="servico-card">
-                <img src="./img/painel on.jpg" alt="Manutenção">
-                <h4>Suporte & Manutenção</h4>
-                <p>Acompanhamento contínuo para garantir que tudo continue funcionando perfeitamente.</p>
-            </div>
-        </div>
+<section id="sobre" class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold mb-12">O que oferecemos</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="./img/painel by.jpg" alt="Design" class="w-12 mx-auto mb-4">
+        <h4 class="text-lg font-semibold mb-2">Design Responsivo</h4>
+        <p>Sites que funcionam perfeitamente em todos os dispositivos, com foco em estética e usabilidade.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="./img/painell (3).jpg" alt="SEO" class="w-12 mx-auto mb-4">
+        <h4 class="text-lg font-semibold mb-2">Otimização SEO</h4>
+        <p>Seu site nas primeiras posições do Google com boas práticas e velocidade de carregamento.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="./img/painel on.jpg" alt="Manutenção" class="w-12 mx-auto mb-4">
+        <h4 class="text-lg font-semibold mb-2">Suporte & Manutenção</h4>
+        <p>Acompanhamento contínuo para garantir que tudo continue funcionando perfeitamente.</p>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Painéis e Vídeo -->
-<section id="painel">
-    <div class="container">
-        <h3>Painéis e Aplicativos</h3>
-        <video src="./img/videopainel.MP4" controls></video>
-
-        <div class="imagens-grid">
-            <div class="imagem">
-                <img src="./img/painel by.jpg" alt="Painel By">
-                <p>Painel Intuitivo</p>
-            </div>
-            <div class="imagem">
-                <img src="./img/painel life.jpg" alt="Painel Life">
-                <p>Painel Life</p>
-            </div>
-            <div class="imagem">
-                <img src="./img/painel ly.jpg" alt="Painel Ly">
-                <p>Painel Ly</p>
-            </div>
-        </div>
+<section id="painel" class="py-16">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold mb-6">Painéis e Aplicativos</h3>
+    <video src="./img/videopainel.MP4" controls class="w-full rounded-lg mb-6"></video>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <img src="./img/painel by.jpg" alt="Painel By" class="rounded-lg shadow mb-2 mx-auto">
+        <p>Painel Intuitivo</p>
+      </div>
+      <div>
+        <img src="./img/painel life.jpg" alt="Painel Life" class="rounded-lg shadow mb-2 mx-auto">
+        <p>Painel Life</p>
+      </div>
+      <div>
+        <img src="./img/painel ly.jpg" alt="Painel Ly" class="rounded-lg shadow mb-2 mx-auto">
+        <p>Painel Ly</p>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Contato -->
-<section id="contato">
-    <div class="container">
-        <h3>Fale com a gente</h3>
-        <form id="contactForm">
-            <input type="text" name="nome" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <textarea name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar Mensagem</button>
-            <p id="feedback"></p>
-        </form>
-    </div>
+<section id="contato" class="py-16 bg-gray-100">
+  <div class="max-w-2xl mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-6 text-center">Fale com a gente</h3>
+    <form id="contactForm" class="bg-white p-6 rounded-lg shadow flex flex-col gap-4">
+      <input type="text" name="nome" placeholder="Nome" required class="p-3 border rounded">
+      <input type="email" name="email" placeholder="E-mail" required class="p-3 border rounded">
+      <textarea name="mensagem" rows="5" placeholder="Mensagem" required class="p-3 border rounded"></textarea>
+      <button type="submit" class="bg-indigo-600 text-white p-3 rounded hover:bg-indigo-700 font-bold">Enviar Mensagem</button>
+      <p id="feedback" class="text-center"></p>
+    </form>
+  </div>
 </section>
 
 <!-- Botão WhatsApp fixo -->
-<a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" 
-   target="_blank" 
-   class="btn-whatsapp-fixed"
-   onclick="gtag('event', 'Compra', { 'send_to': 'AW-17024433243/ads_conversion_Compra_1' });">
-   💬 Chamar no WhatsApp
+<a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank"
+   onclick="gtag('event', 'Compra', { 'send_to': 'AW-17024433243/ads_conversion_Compra_1' });"
+   class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 text-xl">
+   💬
 </a>
 
 <!-- Footer -->
-<footer>
-    &copy; 2025 Cervo Digital. Todos os direitos reservados.
+<footer class="bg-gray-50 py-6 text-center text-sm text-gray-500 mt-16">
+  &copy; 2025 Cervo Digital. Todos os direitos reservados.
 </footer>
 
 <!-- EmailJS -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    emailjs.init('odTeSLj29XyKQLfXl');
+  emailjs.init('odTeSLj29XyKQLfXl');
+  const form = document.getElementById('contactForm');
+  const feedback = document.getElementById('feedback');
 
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('feedback');
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        emailjs.sendForm('wSWTb40hixpLXY985L1xi', 'template_9e3n39l', this)
-            .then(function() {
-                feedback.textContent = "Mensagem enviada!";
-                feedback.className = 'success';
-                form.reset();
-
-                // Registrar conversão do Google Ads
-                gtag('event', 'Compra', {
-                    'send_to': 'AW-17024433243/ads_conversion_Compra_1'
-                });
-            }, function(error) {
-                feedback.textContent = 'Erro ao enviar. Tente novamente!';
-                feedback.className = 'error';
-            });
-    });
+  form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('wSWTb40hixpLXY985L1xi', 'template_9e3n39l', this)
+          .then(function() {
+              feedback.textContent = "Mensagem enviada!";
+              feedback.className = 'text-green-600';
+              form.reset();
+              gtag('event', 'Compra', { 'send_to': 'AW-17024433243/ads_conversion_Compra_1' });
+          }, function(error) {
+              feedback.textContent = 'Erro ao enviar. Tente novamente!';
+              feedback.className = 'text-red-600';
+          });
+  });
 </script>
 
 </body>
