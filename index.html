@@ -7,35 +7,18 @@
     <title>ATIVE APPS</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- Consent Manager -->
     <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/1081e477a2579.js" data-cmp-host="d.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17024433243">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-17024433243');
-</script>
-    <!-- Google tag (gtag.js) event -->
-<script>
-  gtag('event', 'ads_conversion_Compra_1', {
-    // <event_parameters>
-  });
-</script>
-
+    <!-- Google Ads gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17024433243"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17024433243');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17024433243"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17024433243');
-</script>
-    
 <body>
 
 <!-- Header -->
@@ -57,8 +40,13 @@
             <h2>Sites modernos para empresas que querem crescer</h2>
             <p>Criamos experiências digitais que encantam clientes e aumentam sua presença online.</p>
             <p>NESTE SITE VOCÊ VAI ENCONTRAR TODOS OS APLICATIVOS PARA SEREM ATIVADOS!</p>
-            <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" class="btn-whatsapp">
-                💬 Chamar no WhatsApp
+
+            <!-- Botão WhatsApp com evento de conversão -->
+            <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" 
+               target="_blank" 
+               class="btn-whatsapp"
+               onclick="gtag('event', 'Compra', { 'send_to': 'AW-17024433243/ads_conversion_Compra_1' });">
+               💬 Chamar no WhatsApp
             </a>
         </div>
         <div class="hero-image">
@@ -95,7 +83,6 @@
 <section id="painel">
     <div class="container">
         <h3>Painéis e Aplicativos</h3>
-
         <video src="./img/videopainel.MP4" controls></video>
 
         <div class="imagens-grid">
@@ -130,8 +117,11 @@
 </section>
 
 <!-- Botão WhatsApp fixo -->
-<a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" class="btn-whatsapp-fixed">
-    💬 Chamar no WhatsApp
+<a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" 
+   target="_blank" 
+   class="btn-whatsapp-fixed"
+   onclick="gtag('event', 'Compra', { 'send_to': 'AW-17024433243/ads_conversion_Compra_1' });">
+   💬 Chamar no WhatsApp
 </a>
 
 <!-- Footer -->
@@ -139,6 +129,7 @@
     &copy; 2025 Cervo Digital. Todos os direitos reservados.
 </footer>
 
+<!-- EmailJS -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     emailjs.init('odTeSLj29XyKQLfXl');
@@ -153,6 +144,11 @@
                 feedback.textContent = "Mensagem enviada!";
                 feedback.className = 'success';
                 form.reset();
+
+                // Registrar conversão do Google Ads
+                gtag('event', 'Compra', {
+                    'send_to': 'AW-17024433243/ads_conversion_Compra_1'
+                });
             }, function(error) {
                 feedback.textContent = 'Erro ao enviar. Tente novamente!';
                 feedback.className = 'error';
@@ -162,7 +158,3 @@
 
 </body>
 </html>
-
-
-
-
