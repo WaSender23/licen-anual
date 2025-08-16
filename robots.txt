@@ -1,1 +1,14 @@
+User-agent: *
+Allow: /
+Sitemap: https://wasender23.github.io/licen-anual/­sitemap.xml
+Sitemap: https://wasender23.github.io/licen-anual/­pages_index
+Sitemap: https://wasender23.github.io/licen-anual/­posts_index
+Sitemap: https://wasender23.github.io/licen-anual/­tag_index
+
+Sitemap: https://wasender23.github.io/licen-anual/sitemap.xml
+
+User-agent: Mediapartners-Google
+Disallow:
+robots.txt
+
 
