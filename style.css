@@ -132,6 +132,22 @@ video {
     border-radius: 12px;
     margin: 1rem 0;
 }
+.videos {
+  display: flex;
+  gap: 20px;        /* Espaço entre os vídeos */
+  justify-content: center;
+  flex-wrap: wrap;  /* Se a tela for pequena, quebra para baixo */
+}
+
+.videos video {
+  width: 100%;
+  max-width: 400px; /* Limite do tamanho dos vídeos */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+
 
 /* Formulário */
 #contactForm {
@@ -668,6 +684,7 @@ footer {
   <div><img src="img/mastercard.png" alt="Mastercard"></div>
   <div><img src="img/boleto.png" alt="Boleto"></div>
 </div>
+
 
 
 
