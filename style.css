@@ -652,16 +652,11 @@ footer {
 }
 .socials {
   display: flex;
-  gap: 15px;           /* espaço entre os ícones */
+  gap: 5px;           /* espaço entre os ícones */
   justify-content: center; /* centraliza */
   align-items: center;
 }
 
-.socials img {
-  width: 5px;
-  height: 5px;
-  transition: transform 0.3s;
-}
 
 .socials img:hover {
   transform: scale(1.1); /* efeito de zoom ao passar o mouse */
@@ -720,6 +715,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
 
 
