@@ -497,4 +497,68 @@ footer {
         flex-direction: column;
     }
 }
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f1c40f;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section a {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.payments img {
+  width: 40px;
+  margin: 5px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  color: #888;
+}
+
+
 
