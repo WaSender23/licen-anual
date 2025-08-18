@@ -634,6 +634,35 @@ footer {
   padding-top: 15px;
   color: #888;
 }
+.socials {
+  display: flex;
+  gap: 15px;           /* espaço entre os ícones */
+  justify-content: center; /* centraliza */
+  align-items: center;
+}
+
+.socials img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.1); /* efeito de zoom ao passar o mouse */
+}
+
+.footer-payments-shipping-logos {
+  display: flex;
+  flex-wrap: wrap;   /* quebra linha se não couber */
+  gap: 10px;         /* espaço entre as imagens */
+  align-items: center;
+}
+
+.footer-payments-shipping-logos img {
+  width: 40px;   /* tamanho fixo */
+  height: auto;
+}
+
 
 
 
