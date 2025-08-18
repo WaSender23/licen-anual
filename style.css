@@ -662,6 +662,13 @@ footer {
   width: 40px;   /* tamanho fixo */
   height: auto;
 }
+<div class="footer-payments-shipping-logos">
+  <div><img src="img/pix.png" alt="Pix"></div>
+  <div><img src="img/visa.png" alt="Visa"></div>
+  <div><img src="img/mastercard.png" alt="Mastercard"></div>
+  <div><img src="img/boleto.png" alt="Boleto"></div>
+</div>
+
 
 
 
