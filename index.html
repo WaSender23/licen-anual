@@ -44,6 +44,127 @@
 <a href="#contato" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full">Quero ativar agora</a>
 </header>
 
+
+<section id="ads-carousel" class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-8">Ative seus Apps e Aproveite Conteúdo Exclusivo!</h2>
+
+    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+      <!-- Container dos slides -->
+      <div class="slides flex transition-transform duration-700">
+
+        <!-- Slide 1 -->
+        <div class="slide min-w-full bg-gradient-to-r from-yellow-400 to-red-500 p-6 text-white">
+          <h3 class="text-xl font-bold mb-2">🚀 Teste GRÁTIS do App Assist Plus!</h3>
+          <p class="mb-2">Ative seu aplicativo agora e tenha acesso a filmes, séries e conteúdos exclusivos.</p>
+          <p class="mb-4 font-semibold">Vagas restantes: <span class="counter" data-count="25">25</span></p>
+          <a href="https://wa.me/5599991576880" target="_blank"
+             class="inline-block bg-white text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Ativar Agora</a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide min-w-full bg-gradient-to-r from-green-400 to-teal-500 p-6 text-white">
+          <h3 class="text-xl font-bold mb-2">🔥 Licença Oficial Garantida!</h3>
+          <p class="mb-2">Receba suporte especializado e aplicativos funcionando perfeitamente.</p>
+          <p class="mb-4 font-semibold">Vagas restantes: <span class="counter" data-count="18">18</span></p>
+          <a href="https://wa.me/5599991576880" target="_blank"
+             class="inline-block bg-white text-teal-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Garantir Minha Ativação</a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide min-w-full bg-gradient-to-r from-blue-500 to-indigo-600 p-6 text-white">
+          <h3 class="text-xl font-bold mb-2">🎯 Conteúdo Ilimitado em Um Clique!</h3>
+          <p class="mb-2">Filmes, séries, novelas e jogos no mesmo lugar.</p>
+          <p class="mb-4 font-semibold">Vagas restantes: <span class="counter" data-count="20">20</span></p>
+          <a href="https://wa.me/5599991576880" target="_blank"
+             class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Ativar Meu App</a>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide min-w-full bg-gradient-to-r from-purple-500 to-pink-600 p-6 text-white">
+          <h3 class="text-xl font-bold mb-2">💎 Suporte VIP 24h</h3>
+          <p class="mb-2">Ative qualquer aplicativo e tenha suporte dedicado, rápido e seguro.</p>
+          <p class="mb-4 font-semibold">Vagas restantes: <span class="counter" data-count="15">15</span></p>
+          <a href="https://wa.me/5599991576880" target="_blank"
+             class="inline-block bg-white text-pink-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Começar Agora</a>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide min-w-full bg-gradient-to-r from-orange-400 to-red-500 p-6 text-white">
+          <h3 class="text-xl font-bold mb-2">🎬 Filmes e Séries Ilimitados</h3>
+          <p class="mb-2">Assista a tudo que deseja em um único aplicativo, sem complicações.</p>
+          <p class="mb-4 font-semibold">Vagas restantes: <span class="counter" data-count="22">22</span></p>
+          <a href="https://wa.me/5599991576880" target="_blank"
+             class="inline-block bg-white text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Ativar Agora</a>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide min-w-full bg-gradient-to-r from-pink-400 to-purple-500 p-6 text-white">
+          <h3 class="text-xl font-bold mb-2">⚡ Acesso Rápido e Seguro</h3>
+          <p class="mb-2">Tenha todos os seus aplicativos funcionando rapidamente em qualquer dispositivo.</p>
+          <p class="mb-4 font-semibold">Vagas restantes: <span class="counter" data-count="19">19</span></p>
+          <a href="https://wa.me/5599991576880" target="_blank"
+             class="inline-block bg-white text-purple-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Garantir Acesso</a>
+        </div>
+
+      </div>
+
+      <!-- Botões de navegação -->
+      <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200">◀</button>
+      <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200">▶</button>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .slide {
+    min-width: 100%;
+    transition: transform 0.7s ease-in-out;
+  }
+</style>
+
+<script>
+  const slides = document.querySelector('.slides');
+  const slideCount = document.querySelectorAll('.slide').length;
+  let index = 0;
+
+  document.getElementById('next').addEventListener('click', () => {
+    index = (index + 1) % slideCount;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  document.getElementById('prev').addEventListener('click', () => {
+    index = (index - 1 + slideCount) % slideCount;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  // Auto slide a cada 5 segundos
+  setInterval(() => {
+    index = (index + 1) % slideCount;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }, 5000);
+
+  // Contador animado
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-count');
+      const count = +counter.innerText;
+      const increment = target / 50;
+      if(count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 50);
+      } else {
+        counter.innerText = target;
+      }
+    }
+    updateCount();
+  });
+</script>
+
+
+  
 <!-- Benefícios -->
 <section class="py-16 px-6 text-center">
 <h2 class="text-3xl font-bold mb-8">Por que escolher a Assist Plus?</h2>
@@ -179,6 +300,57 @@
     </div>
   </section>
 
+
+  <section id="ads" class="py-16 px-6 bg-gray-100">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12">Ative seus Apps e Ganhe Acesso Imediato!</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Conjunto 1 -->
+      <div class="bg-gradient-to-r from-yellow-400 to-red-500 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <h3 class="text-xl font-bold mb-2 text-white">🚀 Teste GRÁTIS do App Assist Plus!</h3>
+        <p class="mb-4 text-white">Ative seu aplicativo agora e tenha acesso a filmes, séries e conteúdos exclusivos. Sem complicação e rápido!</p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" 
+           class="inline-block bg-white text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Ativar Agora</a>
+      </div>
+
+      <!-- Conjunto 2 -->
+      <div class="bg-gradient-to-r from-green-400 to-teal-500 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <h3 class="text-xl font-bold mb-2 text-white">🔥 Licença Oficial Garantida!</h3>
+        <p class="mb-4 text-white">Receba suporte especializado e aplicativos funcionando perfeitamente. Clique para garantir sua ativação hoje.</p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" 
+           class="inline-block bg-white text-teal-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Garantir Minha Ativação</a>
+      </div>
+
+      <!-- Conjunto 3 -->
+      <div class="bg-gradient-to-r from-blue-500 to-indigo-600 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <h3 class="text-xl font-bold mb-2 text-white">🎯 Conteúdo Ilimitado em Um Clique!</h3>
+        <p class="mb-4 text-white">Filmes, séries, novelas e jogos no mesmo lugar. Ative seu app em minutos e aproveite o melhor do entretenimento.</p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" 
+           class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Ativar Meu App</a>
+      </div>
+
+      <!-- Conjunto 4 -->
+      <div class="bg-gradient-to-r from-purple-500 to-pink-600 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <h3 class="text-xl font-bold mb-2 text-white">💎 Suporte VIP 24h</h3>
+        <p class="mb-4 text-white">Ative qualquer aplicativo e tenha suporte dedicado. Rápido, seguro e sem complicações.</p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" 
+           class="inline-block bg-white text-pink-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Começar Agora</a>
+      </div>
+
+      <!-- Conjunto 5 -->
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-500 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+        <h3 class="text-xl font-bold mb-2 text-white">⚡ Ative Seu App Sem Complicações</h3>
+        <p class="mb-4 text-white">Todos os seus aplicativos favoritos em um único lugar. Clique e garanta seu teste grátis.</p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank" 
+           class="inline-block bg-white text-yellow-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Teste Grátis Agora</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
   <!-- Hero -->
   <section id="hero" class="pt-32 pb-16 bg-indigo-600 text-white">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
@@ -223,6 +395,99 @@
     </div>
   </section>
 
+
+  <section id="ads-advanced" class="py-16 px-6 bg-gray-100">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12">Ative seus Apps e Aproveite Conteúdo Exclusivo!</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Anúncio 1 -->
+      <div class="ad-box bg-gradient-to-r from-yellow-400 to-red-500 p-6 rounded-2xl shadow-lg transform opacity-0 transition duration-700">
+        <h3 class="text-xl font-bold mb-2 text-white">🚀 Teste GRÁTIS do App Assist Plus!</h3>
+        <p class="mb-2 text-white">Ative seu aplicativo agora e tenha acesso a filmes, séries e conteúdos exclusivos.</p>
+        <p class="mb-4 text-white font-semibold">Vagas restantes: <span class="counter" data-count="25">25</span></p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank"
+           class="inline-block bg-white text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Ativar Agora</a>
+      </div>
+
+      <!-- Anúncio 2 -->
+      <div class="ad-box bg-gradient-to-r from-green-400 to-teal-500 p-6 rounded-2xl shadow-lg transform opacity-0 transition duration-700">
+        <h3 class="text-xl font-bold mb-2 text-white">🔥 Licença Oficial Garantida!</h3>
+        <p class="mb-2 text-white">Receba suporte especializado e aplicativos funcionando perfeitamente.</p>
+        <p class="mb-4 text-white font-semibold">Vagas restantes: <span class="counter" data-count="18">18</span></p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank"
+           class="inline-block bg-white text-teal-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Garantir Minha Ativação</a>
+      </div>
+
+      <!-- Anúncio 3 -->
+      <div class="ad-box bg-gradient-to-r from-blue-500 to-indigo-600 p-6 rounded-2xl shadow-lg transform opacity-0 transition duration-700">
+        <h3 class="text-xl font-bold mb-2 text-white">🎯 Conteúdo Ilimitado em Um Clique!</h3>
+        <p class="mb-2 text-white">Filmes, séries, novelas e jogos no mesmo lugar.</p>
+        <p class="mb-4 text-white font-semibold">Vagas restantes: <span class="counter" data-count="20">20</span></p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank"
+           class="inline-block bg-white text-indigo-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Ativar Meu App</a>
+      </div>
+
+      <!-- Anúncio 4 -->
+      <div class="ad-box bg-gradient-to-r from-purple-500 to-pink-600 p-6 rounded-2xl shadow-lg transform opacity-0 transition duration-700">
+        <h3 class="text-xl font-bold mb-2 text-white">💎 Suporte VIP 24h</h3>
+        <p class="mb-2 text-white">Ative qualquer aplicativo e tenha suporte dedicado, rápido e seguro.</p>
+        <p class="mb-4 text-white font-semibold">Vagas restantes: <span class="counter" data-count="15">15</span></p>
+        <a href="https://wa.me/5599991576880?text=Ol%C3%A1%20quero%20ativar%20meu%20aplicativo" target="_blank"
+           class="inline-block bg-white text-pink-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-200 transition">Começar Agora</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .ad-box {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  .ad-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // Scroll reveal
+  const adBoxes = document.querySelectorAll('.ad-box');
+  const counters = document.querySelectorAll('.counter');
+
+  function reveal() {
+    adBoxes.forEach(box => {
+      const boxTop = box.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if(boxTop < windowHeight - 100) {
+        box.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', reveal);
+  window.addEventListener('load', reveal);
+
+  // Contador de vagas animado
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-count');
+      const count = +counter.innerText;
+      const increment = target / 50; // velocidade do contador
+      if(count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 50);
+      } else {
+        counter.innerText = target;
+      }
+    }
+    updateCount();
+  });
+</script>
+
+
   <!-- Bloco de Players (2ª vez - duplicado) -->
   <section id="players" class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -266,6 +531,7 @@
 
 </body>
 </html>
+
 
 
 
