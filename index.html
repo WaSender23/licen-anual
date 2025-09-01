@@ -34,7 +34,7 @@
      crossorigin="anonymous"></script>
   <meta name="google-adsense-account" content="ca-pub-9684775298003314">
 </head>
-<!---
+
 <header class="flex items-center justify-between p-4 bg-gray-900 shadow-lg">
   <!-- Logo -->
   <div class="flex items-center space-x-3">
@@ -43,14 +43,75 @@
   </div>
 
   <!-- Menu -->
-  <nav class="space-x-6">
-    <a href="#home" class="text-white hover:text-orange-400">Início</a>
-    <a href="#sobre" class="text-white hover:text-orange-400">Sobre</a>
-    <a href="#servicos" class="text-white hover:text-orange-400">Serviços</a>
-    <a href="#contato" class="text-white hover:text-orange-400">Contato</a>
-  </nav>
+Show 👌
+Vou montar um **menu responsivo com Tailwind** que funciona em desktop como um menu horizontal e em **mobile** como um menu hambúrguer (abre e fecha ao clicar).
+
+Aqui está o código:
+
+```html
+<!-- Navbar Responsiva -->
+<nav class="bg-gray-900 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html" class="text-white text-xl font-bold">MinhaLogo</a>
+
+    <!-- Botão Hamburguer (Mobile) -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+      <!-- Ícone -->
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Links Desktop -->
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="text-white hover:text-orange-400">Início</a>
+      <a href="sobre.html" class="text-white hover:text-orange-400">Sobre</a>
+      <a href="servicos.html" class="text-white hover:text-orange-400">Serviços</a>
+      <a href="contato.html" class="text-white hover:text-orange-400">Contato</a>
+    </div>
+  </div>
+
+  <!-- Links Mobile -->
+  <div id="menu" class="hidden md:hidden mt-4 space-y-4">
+    <a href="index.html" class="block text-white hover:text-orange-400">Início</a>
+    <a href="sobre.html" class="block text-white hover:text-orange-400">Sobre</a>
+    <a href="servicos.html" class="block text-white hover:text-orange-400">Serviços</a>
+    <a href="contato.html" class="block text-white hover:text-orange-400">Contato</a>
+  </div>
+</nav>
+
+<!-- Script JS para abrir/fechar o menu -->
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+```
+
+### 🔎 Como funciona
+
+* **Desktop (≥768px)**:
+
+  * Mostra os links alinhados à direita (`flex space-x-6`).
+* **Mobile (<768px)**:
+
+  * Mostra apenas o botão hambúrguer.
+  * Ao clicar, aparece o menu vertical (`menu.classList.toggle("hidden")`).
+
+---
+
+⚡ Quer que eu adicione também uma **animação suave** no abrir/fechar do menu mobile (com transição tipo *slide down*) para ficar mais moderno?
+
+
+
+  
 </header>
-  ---->
+  
   
 <body class="bg-gray-50 text-gray-800">
 <header class="fixed w-full bg-white shadow-md z-50">
@@ -1129,6 +1190,7 @@ https://ativeapp.com/painel
 
 </body>
 </html>
+
 
 
 
